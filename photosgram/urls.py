@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
 
-def hello_world(request):
-    return HttpResponse('Hello World!')
+from photosgram.views import hello_world, obj_request
 
 
 urlpatterns = [
     # path('admin/', admin.site.urls),}
-    path('hello-world/', hello_world)
+    path('hello-world/', hello_world),
+    path('hello/', obj_request)
 ]
