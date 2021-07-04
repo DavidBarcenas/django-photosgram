@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from photosgram.views import hello_world, obj_request, say_hi
+from posts.views import list_posts
 
 
 urlpatterns = [
     # path('admin/', admin.site.urls),}
     path('hello-world/', hello_world),
     path('sorted/', obj_request),
-    path('hi/<str:name>/<int:age>/', say_hi)
+    path('hi/<str:name>/<int:age>/', say_hi),
+    path('posts/', list_posts)
 ]
