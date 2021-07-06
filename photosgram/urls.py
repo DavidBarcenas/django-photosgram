@@ -21,7 +21,7 @@ from posts.views import list_posts
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),}
+    path('admin/', admin.site.urls),
     path('hello-world/', hello_world),
     path('sorted/', obj_request),
     path('hi/<str:name>/<int:age>/', say_hi),
