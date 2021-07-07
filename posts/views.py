@@ -34,4 +34,4 @@ posts = [
 # Create your views here.
 def list_posts(request):
     """List existing posts"""
-    return render(request, 'feed.html', {'posts': posts})
+    return render(request, 'posts/feed.html', {'posts': posts})
