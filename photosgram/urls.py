@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from posts.views import list_posts
-from users.views import login_view, logout_view, signup_view
+from users.views import login_view, logout_view, signup_view, update_profile
 
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('login/', login_view, name="login"),
     path('logout/', logout_view, name="logout"),
     path('signup/', signup_view, name="signup"),
+    path('users/me/profile', update_profile, name="update_profile"),
     # path('hello-world/', hello_world),
     # path('sorted/', obj_request),
     # path('hi/<str:name>/<int:age>/', say_hi),
