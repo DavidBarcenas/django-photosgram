@@ -5,6 +5,7 @@ from django.shortcuts import redirect, render
 from django.db.utils import IntegrityError
 
 from django.contrib.auth.models import User
+from users.forms import Profileform
 from users.models import Profile
 
 # Create your views here.
@@ -52,7 +53,25 @@ def signup_view(request):
 
 @login_required
 def update_profile(request):
-    return render(request, 'users/update_profile.html')
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        form = Profileform(request.POST)
+
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = Profileform()
+    
+    return render(
+        request = request, 
+        template_name = 'users/update_profile.html', 
+        context = {
+            'profile': profile,
+            'user': request.user,
+            'form': form
+        }
+    )
 
 
 @login_required
