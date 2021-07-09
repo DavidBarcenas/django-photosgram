@@ -5,31 +5,10 @@
 {% endblock%}
 
 {% block container %}
-    {% if error %}
-        <p class="alert alert-danger">{{ error }}</p>
-    {% endif%}
-
     <form method="POST" action="{% url "signup" %}" autocomplete="off">
         {% csrf_token %}
 
-        <div class="form-group">
-            <input type="text" placeholder="Username" name="username" class="form-control" required />
-        </div>
-        <div class="form-group">
-            <input type="text" placeholder="First name" name="first_name" class="form-control" required />
-        </div>
-        <div class="form-group">
-            <input type="text" placeholder="Last name" name="last_name" class="form-control" required />
-        </div>
-        <div class="form-group">
-            <input type="email" placeholder="Email Address" name="email" class="form-control" required />
-        </div>
-        <div class="form-group">
-            <input type="password" placeholder="Password" name="password" class="form-control" />
-        </div>
-        <div class="form-group">
-            <input type="password" placeholder="Confirm Password" name="password_confirm" class="form-control" />
-        </div>
+        {{ form.as_p }}       
 
         <button type="submit" class="btn btn-success btn-block">Sign up!</button>
     </form>
