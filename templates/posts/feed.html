@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_content %}
-<title>Photosgram feed</title>
+<title>Photosgram</title>
 {% endblock %}
 
 {% block container %}
@@ -9,14 +9,20 @@
         {% for post in posts %}
         <div class="col-lg-4 offset-lg-4">
             <div class="media">
-                <img class="mr-3 rounded-circle" src="{{ post.user.picture }}" alt="{{ post.user.name }}">
+                <img class="mr-3 rounded-circle" src="{{ post.profile.picture.url }}" height="35" alt="{{ post.user.get_full_name }}">
                 <div class="media-body">
-                    <h5 class="mt-0">{{ post.user.name }}</h5>
-                    {{ post.timestamp }}
+                    <h5 class="mt-0">{{ post.user.get_full_name  }}</h5>
                 </div>
             </div>
-            <img class="img-fluid mt-3 border rounded" src="{{ post.photo }}" alt="{{ post.title }}">
-            <h6 class="ml-1 mt-1">{{ post.title }}</h6>
+            <img class="img-fluid mt-3 border rounded" src="{{ post.photo.url }}" alt="{{ post.title }}">
+            <p class="mt-1 ml-2">
+                <a href="">
+                    <i class="far fa-heart"></i>
+                </a> 30 likes
+            </p>
+            <p class="ml-2 mt-0 mb-2">
+                <b>{{ post.title }}</b> - <small>{{ post.created }}</small>
+            </p>
         </div>
         {% endfor %}
     </div>
