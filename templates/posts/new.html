@@ -9,7 +9,7 @@
     <div class="row justify-content-md-center">
         <div class="col-6 pt-3 pb-3" id="profile-box">
             <h4 class="mb-4">Post a new photo!</h4>
-            <form method="POST" action="{% url 'create_post' %}" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'posts:create_post' %}" enctype="multipart/form-data">
                 {% csrf_token %}
 
                 <input type="hidden" name="user" value="{{ user.pk }}" />
