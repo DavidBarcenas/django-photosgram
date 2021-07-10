@@ -9,7 +9,7 @@ from posts.models import Post
 class PostDetailView(LoginRequiredMixin, DetailView):
     template_name = 'posts/detail.html'
     queryset = Post.objects.all()
-    context_object_name = 'posts'
+    context_object_name = 'post'
 
 # Create your views here.
 class PostsFeedView(LoginRequiredMixin, ListView):
