@@ -5,7 +5,7 @@
 {% endblock%}
 
 {% block container %}
-    <form method="POST" action="{% url "signup" %}" autocomplete="off">
+    <form method="POST" action="{% url "users:signup" %}" autocomplete="off">
         {% csrf_token %}
 
         {{ form.as_p }}       

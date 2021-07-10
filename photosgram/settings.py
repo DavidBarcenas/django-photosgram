@@ -141,4 +141,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 # Login Url
-LOGIN_URL = 'login'
+LOGIN_URL = '/users/login/'

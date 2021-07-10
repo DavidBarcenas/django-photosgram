@@ -1,12 +1,11 @@
 from django.urls import path
-from django.views.generic import TemplateView
-from users.views import login_view, logout_view, signup_view, update_profile
+from users.views import login_view, logout_view, signup_view, update_profile, UserDetailView
 
 
 urlpatterns = [
-    path('<str:username>/', TemplateView.as_view(template_name="users/detail"), name='detail'),
-    path('users/login/', login_view, name="login"),
-    path('users/logout/', logout_view, name="logout"),
-    path('users/signup/', signup_view, name="signup"),
-    path('users/me/profile/', update_profile, name="update_profile"),
+    path('login/', login_view, name="login"),
+    path('logout/', logout_view, name="logout"),
+    path('signup/', signup_view, name="signup"),
+    path('me/profile/', update_profile, name="update_profile"),
+    path('<str:username>/', UserDetailView.as_view(), name='detail'),
 ]
