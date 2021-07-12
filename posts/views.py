@@ -26,8 +26,8 @@ class CreatePostView(LoginRequiredMixin, CreateView):
     """Create new post"""
 
     template_name = 'posts/new.html'
-    form_class = PostForm
-    success_url = reverse_lazy('posts:feed')
+    form_class    = PostForm
+    success_url   = reverse_lazy('posts:feed')
     
     def get_context_data(self, **kwargs):
         """Add user and profile to context"""
