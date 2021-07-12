@@ -1,51 +1,61 @@
 html, body {
     background: #fafafa;
-    height: 100%;
     width: 100%;
+    min-height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    overflow-x: hidden;
 }
 
-#auth-container {
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 1px;
-}
-
-#main-navbar {
-    background: #fff;
-    border-bottom: 1px solid rgba(0,0,0,.0975);
-}
-
-.body-container {
-    padding-top: 90px;
-}
-
-.post-container {
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-}
-
-.nav-icon a {
-    color: #262626;
-    font-size: 1.3em;
+img {
+    max-width: 100%;
     display: block;
-    margin-top: .2em;
-    margin-left: 1.2em;
-    font-weight: 100;
-}
-.nav-icon a:hover {
-    color: #1d5e72;;
 }
 
-#profile-box {
+ul {
+    list-style: none;
+}
+
+.navbar  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
     background: #fff;
-    border: 1px solid rgba(0,0,0,.0975);
-    border-radius: 1px;
-    margin-top: 6em;
+    overflow: hidden;
 }
 
-#user-posts #post-thumb {
-    background: #fff;
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
 }
 
+.navbar-brand img {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar-avatar img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navbar ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+.navbar ul li a {
+    color: #000;
+    font-size: 1.2rem;
+}
