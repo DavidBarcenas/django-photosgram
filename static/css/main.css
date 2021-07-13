@@ -10,6 +10,10 @@ html, body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -22,6 +26,10 @@ ul {
 figure {
     padding: 0;
     margin: 0;
+}
+
+hr {
+    margin: 1rem auto;
 }
 
 .wrapper {
@@ -168,4 +176,55 @@ figure {
     margin-top: .25rem;
     font-size: .875em;
     color: #dc3545;
+}
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+.detail-avatar {
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
+}
+
+.detail-cta {
+    border: 1px solid #198754;
+    color: #198754;
+    padding: .2rem .75rem;
+    font-size: .75rem;
+    border-radius: 1.5rem;
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+.detail-data div {
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    padding: .5rem 1.25rem;
+}
+
+.detail-data div:first-child {
+    padding-left: 0;
+}
+
+.detail-data div:last-child {
+    border-right: none;
+}
+
+.detail-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .75rem;
+}
+
+.detail-posts .card {
+    padding: 0;
+}
+
+.detail-posts .card img {
+    object-fit: cover;
 }
