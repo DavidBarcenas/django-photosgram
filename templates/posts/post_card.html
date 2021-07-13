@@ -25,15 +25,14 @@
         <a href="{% url "users:detail" post.user.username %}">
             <img src="{{ post.profile.picture.url }}" alt="{{ post.user.get_full_name }}" class="img-rounded">
         </a>
-        <figcaption>
-            <p>{{ post.user.get_full_name }}</p>
-            <span>{{ post.created | date:"d M, Y"  }}</span>
-        </figcaption>
+        <figcaption>{{ post.user.get_full_name }}</figcaption>
     </figure>
-    <div class="card-description">
-        <p>{{ post.title }}</p>
-    </div>
     <figure class="card-image">
         <img src="{{ post.photo.url }}" alt="{{ post.title }}">
     </figure>
+    <div class="card-description">
+        <p class="card-like"><i class="far fa-heart"></i>30 likes</p>
+        <p>{{ post.title }}</p>
+        <span class="card-date">{{ post.created | date:"d M, Y"  }}</span>
+    </div>
 </div>

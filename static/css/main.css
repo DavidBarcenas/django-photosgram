@@ -24,6 +24,11 @@ figure {
     margin: 0;
 }
 
+.wrapper {
+    max-width: 860px;
+    margin: auto;
+}
+
 .img-rounded {
     width: 35px;
     height: 35px;
@@ -84,26 +89,33 @@ figure {
 
 .card-head {
     display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .card-head figcaption {
-    line-height: 1rem;
     margin-left: 1rem;
-}
-
-.card-head p {
-    margin: 0;
+    vertical-align: middle;
     font-weight: 500;
-}
-
-.card-head span {
-    font-size: .75rem;
-    font-weight: 500;
-    display: inline-block;
-    color: #777;
 }
 
 .card-description {
     font-size: .9rem;
-    margin: 1.5rem auto;
+    font-weight: 300;
+}
+
+.card-like {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.card-like i {
+    margin-right: .5rem;
+    font-size: .9rem;
+}
+
+.card-date {
+    color: #777;
+    font-size: .75rem;
 }
