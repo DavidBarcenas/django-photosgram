@@ -5,44 +5,44 @@
 {% endblock %}
 
 {% block wrapper %}
-    <div class="card detail">
-        <img src="{{ user.profile.picture.url }}" alt="@{{ user.username}}" class="img-rounded detail-avatar" />
-        <div class="detail-info">
-            <h2>
-                {{ user.username }}
-                {% if user == request.user %}
-                    <a href="{% url "users:update_profile" %}" class="detail-cta">Editar perfil</a>
-                {% else %}
-                    <a href="#" class="detail-cta">Follow</a>
-                {% endif %}
-            </h2>
-            <div class="detail-data">
-                <div>
-                    <b>{{ user.profile.posts_count }}785</b> posts
+    <div class="detail-wrapper">
+        <div class="detail">
+            <img src="{{ user.profile.picture.url }}" alt="@{{ user.username}}" class="img-rounded detail-avatar" />
+            <div class="detail-info">
+                <h2>
+                    {{ user.username }}
+                    {% if user == request.user %}
+                        <a href="{% url "users:update_profile" %}" class="detail-cta">Editar perfil</a>
+                    {% else %}
+                        <a href="#" class="detail-cta">Follow</a>
+                    {% endif %}
+                </h2>
+                <div class="detail-data">
+                    <div>
+                        <b>{{ user.profile.posts_count }}785</b> posts
+                    </div>
+                    <div>
+                        <b>{{ user.profile.followers }}1,401</b> followers
+                    </div>
+                    <div>
+                        <b>{{ user.profile.following }}491</b> following
+                    </div>
                 </div>
                 <div>
-                    <b>{{ user.profile.followers }}1,401</b> followers
+                    <p>{{ user.profile.biography }}</p>
                 </div>
-                <div>
-                    <b>{{ user.profile.following }}491</b> following
-                </div>
-            </div>
-            <div>
-                <p>{{ user.profile.biography }}</p>
             </div>
         </div>
+
+        <hr>
+
+        <div class="detail-posts">
+            {% for post in posts %}
+                <a href="{% url 'posts:detail' post.pk %}" class="card">
+                    <img src="{{ post.photo.url }}" alt="{{ post.title }}" class="img-fluid"/>
+                </a>
+            {% endfor %}
+        </div>
     </div>
-
-    <hr>
-
-    <div class="detail-posts">
-        {% for post in posts %}
-            <a href="{% url 'posts:detail' post.pk %}" class="card">
-                <img src="{{ post.photo.url }}" alt="{{ post.title }}" class="img-fluid"/>
-            </a>
-        {% endfor %}
-    </div>
-
-
 
 {% endblock %}

@@ -29,7 +29,7 @@ figure {
 }
 
 hr {
-    margin: 1rem auto;
+    margin: 1.5rem auto;
 }
 
 .wrapper {
@@ -166,6 +166,7 @@ hr {
     border-radius: .25rem;
     width: 100%;
     cursor: pointer;
+    margin-top: 1.5rem;
 }
 
 .is-invalid {
@@ -181,14 +182,20 @@ hr {
 .detail {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
     margin-bottom: 0;
+    text-align: center;
+}
+
+.detail-wrapper {
+    background: #fff;
+    padding: 1rem;
 }
 
 .detail-avatar {
     width: 150px;
     height: 150px;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
+    margin: auto;
 }
 
 .detail-cta {
@@ -201,10 +208,21 @@ hr {
     margin-left: 1rem;
 }
 
+.detail-info {
+    width: 100%;
+}
+
 .detail-data div {
+    box-sizing: border-box;
     border-right: 1px solid #ccc;
     display: inline-block;
-    padding: .5rem 1.25rem;
+    width: 32%;
+    padding: .5rem;
+    margin: 1rem auto;
+}
+
+.detail-data div b {
+    display: block;
 }
 
 .detail-data div:first-child {
@@ -227,4 +245,31 @@ hr {
 
 .detail-posts .card img {
     object-fit: cover;
+}
+
+.media {
+    padding: 1rem;
+    text-align: center;
+}
+
+.media img {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+
+.media h5 {
+    font-size: 1rem;
+}
+
+.update-profile label {
+    color: #555;
+    display: block;
+    font-size: .75rem;
+    margin-bottom: .5rem;
+}
+
+.login-logo {
+    margin: auto;
+    margin-bottom: 1rem;
 }
