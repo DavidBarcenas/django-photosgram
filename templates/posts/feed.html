@@ -4,11 +4,10 @@
 <title>Photosgram</title>
 {% endblock %}
 
-{% block container %}
-    <div class="row">
+{% block wrapper %}
+    <div class="feed">
         {% for post in posts %}
             {% include "posts/post_card.html" %}
         {% endfor %}
     </div>
-    {% include 'pagination.html' %}
 {% endblock %}

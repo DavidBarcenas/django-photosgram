@@ -2,7 +2,7 @@ html, body {
     background: #fafafa;
     width: 100%;
     min-height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -17,6 +17,18 @@ img {
 
 ul {
     list-style: none;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+.img-rounded {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .navbar  {
@@ -42,13 +54,6 @@ ul {
     height: 35px;
 }
 
-.navbar-avatar img {
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 .navbar ul li {
     display: inline-block;
     vertical-align: middle;
@@ -58,4 +63,47 @@ ul {
 .navbar ul li a {
     color: #000;
     font-size: 1.2rem;
+}
+
+.feed {
+    padding: 1rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+}
+
+.card-head,
+.card-description {
+    padding: 0rem 1.5rem;
+} 
+
+.card-head {
+    display: flex;
+}
+
+.card-head figcaption {
+    line-height: 1rem;
+    margin-left: 1rem;
+}
+
+.card-head p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.card-head span {
+    font-size: .75rem;
+    font-weight: 500;
+    display: inline-block;
+    color: #777;
+}
+
+.card-description {
+    font-size: .9rem;
+    margin: 1.5rem auto;
 }

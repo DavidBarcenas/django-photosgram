@@ -8,6 +8,9 @@
     {% block head_content %}{% endblock %}
 
     {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
 
@@ -15,8 +18,8 @@
 <body>
     {% include "nav.html" %}
 
-    <div class="container body-container">
-        {% block container %}
+    <div class="wrapper">
+        {% block wrapper %}
         {% endblock%}
     </div>
 </body>

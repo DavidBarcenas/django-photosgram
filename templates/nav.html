@@ -2,16 +2,21 @@
 <nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="{% url 'posts:feed' %}">
-            <img src="{% static "img/instagram.png" %}"/>
+            <img src="{% static "img/instagram.png" %}" alt="Fotosgram" />
         </a>
-
         <ul>
             <li class="nav-item">
-                <a href="{% url 'users:detail' request.user.username %}" class="navbar-avatar">
+                <a href="{% url 'users:detail' request.user.username %}">
                     {% if request.user.profile.picture %}
-                        <img src="{{ request.user.profile.picture.url }}" />
+                        <img 
+                            src="{{ request.user.profile.picture.url }}" 
+                            alt="{{ request.user.username }}" 
+                            class="img-rounded" />
                     {% else %}
-                        <img src="{% static 'img/default-profile.png' %}" />
+                        <img 
+                            src="{% static 'img/default-profile.png' %}" 
+                            alt="{{ request.user.username }}" 
+                            class="img-rounded" />
                     {% endif %}
                 </a>
             </li>
