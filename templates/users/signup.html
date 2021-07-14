@@ -4,12 +4,14 @@
 <title>Photosgram | Sign up</title>
 {% endblock%}
 
-{% block container %}
-    <form method="POST" action="{% url "users:signup" %}" autocomplete="off">
+{% block wrapper %}
+    <div class="card login">
+        <form method="POST" action="{% url "users:signup" %}" autocomplete="off">
         {% csrf_token %}
 
         {{ form.as_p }}       
 
         <button type="submit" class="btn btn-success btn-block">Sign up!</button>
     </form>
+    </div>
 {% endblock %}

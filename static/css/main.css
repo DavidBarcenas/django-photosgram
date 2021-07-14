@@ -269,6 +269,12 @@ hr {
     margin-bottom: .5rem;
 }
 
+.login {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
 .login-logo {
     margin: auto;
     margin-bottom: 1rem;
